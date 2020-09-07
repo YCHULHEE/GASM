@@ -10,9 +10,9 @@ namespace GASM
     class DataSources
     {
         private static SqlConnection con = null;
-        private static string strcon = "Data Source=192.168.0.39;Initial Catalog=20200821;User ID=GroupA;Password=1234";
+        private static string strcon = "Data Source=192.168.0.39;Initial Catalog=RecruitDataBase;User ID=GroupA;Password=1234";
 
-        public static SqlConnection getConnection()
+        public static SqlConnection GetConnection()
         {
             //DataSources ds = new DataSources();
             //con = new SqlConnection(ds.strcon);
@@ -21,7 +21,7 @@ namespace GASM
             return con;
         }
 
-        public static void Close()
+        public static void Close(SqlConnection con)
         {
             con.Close();
         }

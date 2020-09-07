@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("노드3");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("노드4");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("노드5");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("노드0", new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8,
-            treeNode9});
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("노드1");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("노드2");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("노드3");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("노드4");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("노드5");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("노드0", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("노드1");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("노드2");
             this.dbDataGridView = new System.Windows.Forms.DataGridView();
             this.dbTabControl = new System.Windows.Forms.TabControl();
             this.resultTabPage = new System.Windows.Forms.TabPage();
@@ -105,22 +105,22 @@
             // 
             this.entityTreeView.Location = new System.Drawing.Point(0, 4);
             this.entityTreeView.Name = "entityTreeView";
-            treeNode7.Name = "노드3";
-            treeNode7.Text = "노드3";
-            treeNode8.Name = "노드4";
-            treeNode8.Text = "노드4";
-            treeNode9.Name = "노드5";
-            treeNode9.Text = "노드5";
-            treeNode10.Name = "노드0";
-            treeNode10.Text = "노드0";
-            treeNode11.Name = "노드1";
-            treeNode11.Text = "노드1";
-            treeNode12.Name = "노드2";
-            treeNode12.Text = "노드2";
+            treeNode1.Name = "노드3";
+            treeNode1.Text = "노드3";
+            treeNode2.Name = "노드4";
+            treeNode2.Text = "노드4";
+            treeNode3.Name = "노드5";
+            treeNode3.Text = "노드5";
+            treeNode4.Name = "노드0";
+            treeNode4.Text = "노드0";
+            treeNode5.Name = "노드1";
+            treeNode5.Text = "노드1";
+            treeNode6.Name = "노드2";
+            treeNode6.Text = "노드2";
             this.entityTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode10,
-            treeNode11,
-            treeNode12});
+            treeNode4,
+            treeNode5,
+            treeNode6});
             this.entityTreeView.Size = new System.Drawing.Size(178, 636);
             this.entityTreeView.TabIndex = 0;
             // 
@@ -222,6 +222,7 @@
             this.actionButton.TabIndex = 4;
             this.actionButton.Text = "실행";
             this.actionButton.UseVisualStyleBackColor = true;
+            this.actionButton.Click += new System.EventHandler(this.actionButton_Click);
             // 
             // queryLabel
             // 

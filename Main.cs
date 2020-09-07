@@ -12,9 +12,15 @@ namespace GASM
 {
     public partial class Main : Form
     {
+        SqlStringCheck check = new SqlStringCheck();
         public Main()
         {
             InitializeComponent();
+        }
+
+        private void actionButton_Click(object sender, EventArgs e)
+        {     
+            check.string_check(queryTextBox);
         }
     }
 }
