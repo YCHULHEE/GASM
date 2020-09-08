@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GASM
 {
-    class DataSources
+    class DataSource
     {
         private static SqlConnection con = null;
         private static string strcon = "Data Source=192.168.0.39;Initial Catalog=RecruitDataBase;User ID=GroupA;Password=1234";

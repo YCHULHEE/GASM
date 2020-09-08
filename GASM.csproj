@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataSources.cs" />
-    <Compile Include="Ddl.cs" />
+    <Compile Include="DataSource.cs" />
+    <Compile Include="MainDataSource.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

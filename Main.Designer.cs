@@ -56,6 +56,7 @@
             this.actionButton = new System.Windows.Forms.Button();
             this.queryLabel = new System.Windows.Forms.Label();
             this.queryTextBox = new System.Windows.Forms.RichTextBox();
+            this.logTabPage = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dbDataGridView)).BeginInit();
             this.dbTabControl.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -75,6 +76,7 @@
             // 
             this.dbTabControl.Controls.Add(this.resultTabPage);
             this.dbTabControl.Controls.Add(this.MessageTabPage);
+            this.dbTabControl.Controls.Add(this.logTabPage);
             this.dbTabControl.Location = new System.Drawing.Point(178, 446);
             this.dbTabControl.Name = "dbTabControl";
             this.dbTabControl.SelectedIndex = 0;
@@ -242,6 +244,16 @@
             this.queryTextBox.TabIndex = 2;
             this.queryTextBox.Text = "";
             // 
+            // logTabPage
+            // 
+            this.logTabPage.Location = new System.Drawing.Point(4, 22);
+            this.logTabPage.Name = "logTabPage";
+            this.logTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.logTabPage.Size = new System.Drawing.Size(768, 168);
+            this.logTabPage.TabIndex = 2;
+            this.logTabPage.Text = "로그";
+            this.logTabPage.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -284,6 +296,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Button actionButton;
+        private System.Windows.Forms.TabPage logTabPage;
     }
 }
 
