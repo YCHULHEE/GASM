@@ -19,7 +19,8 @@ namespace GASM
         }
 
         private void actionButton_Click(object sender, EventArgs e)
-        {     
+        {
+            string a = check.SqlCensor(queryTextBox);
             check.Stringcheck(queryTextBox, dbDataGridView, logTabPage);
             logTabPage.Text = "hi";
         }

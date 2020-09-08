@@ -12,7 +12,7 @@ namespace GASM
     {
         MainDataSource ddl = new MainDataSource();
 
-        List<string> c4 = new List<string> { "drop", "exec"};
+        List<string> c4 = new List<string> { "drop"};
         List<string> c5 = new List<string> { "alter", "grant" };
         List<string> c6 = new List<string> { "create", "insert", "delete", "revoke", "commit" };
         List<string> c8 = new List<string> { "truncate", "rollback" };
@@ -34,6 +34,10 @@ namespace GASM
         {
             textBox.Text.Trim();
             if (textBox.Text.Substring(0, 6).ToLower().Equals("select"))
+            {
+                dataGridView.DataSource = ddl.DoSqlSelect(textBox);
+            }
+            else if(textBox.Text.Substring(0, 4).ToLower().Equals("exec"))
             {
                 dataGridView.DataSource = ddl.DoSqlSelect(textBox);
             }
@@ -59,5 +63,18 @@ namespace GASM
             }
         }
 
+        public string SqlCensor(RichTextBox textBox)
+        {
+            string[] censor;
+            string result = "";
+            char[] sep = {';'};
+            censor = textBox.Text.Split(sep, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var item in censor)
+            {
+                result = item;
+            }
+            result.Trim();
+            return result;
+        }
     }
 }

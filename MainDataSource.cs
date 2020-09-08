@@ -11,6 +11,7 @@ namespace GASM
 {
     class MainDataSource
     {
+
         public void DoSql(RichTextBox textBox)
         {
             try
