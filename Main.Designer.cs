@@ -28,19 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("노드3");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("노드4");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("노드5");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("노드0", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3});
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("노드1");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("노드2");
             this.dbDataGridView = new System.Windows.Forms.DataGridView();
             this.dbTabControl = new System.Windows.Forms.TabControl();
             this.resultTabPage = new System.Windows.Forms.TabPage();
             this.MessageTabPage = new System.Windows.Forms.TabPage();
+            this.logTabPage = new System.Windows.Forms.TabPage();
             this.entityTreeView = new System.Windows.Forms.TreeView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.메ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +48,6 @@
             this.actionButton = new System.Windows.Forms.Button();
             this.queryLabel = new System.Windows.Forms.Label();
             this.queryTextBox = new System.Windows.Forms.RichTextBox();
-            this.logTabPage = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dbDataGridView)).BeginInit();
             this.dbTabControl.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -103,28 +94,23 @@
             this.MessageTabPage.Text = "메세지";
             this.MessageTabPage.UseVisualStyleBackColor = true;
             // 
+            // logTabPage
+            // 
+            this.logTabPage.Location = new System.Drawing.Point(4, 22);
+            this.logTabPage.Name = "logTabPage";
+            this.logTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.logTabPage.Size = new System.Drawing.Size(768, 168);
+            this.logTabPage.TabIndex = 2;
+            this.logTabPage.Text = "로그";
+            this.logTabPage.UseVisualStyleBackColor = true;
+            // 
             // entityTreeView
             // 
             this.entityTreeView.Location = new System.Drawing.Point(0, 4);
             this.entityTreeView.Name = "entityTreeView";
-            treeNode1.Name = "노드3";
-            treeNode1.Text = "노드3";
-            treeNode2.Name = "노드4";
-            treeNode2.Text = "노드4";
-            treeNode3.Name = "노드5";
-            treeNode3.Text = "노드5";
-            treeNode4.Name = "노드0";
-            treeNode4.Text = "노드0";
-            treeNode5.Name = "노드1";
-            treeNode5.Text = "노드1";
-            treeNode6.Name = "노드2";
-            treeNode6.Text = "노드2";
-            this.entityTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode5,
-            treeNode6});
             this.entityTreeView.Size = new System.Drawing.Size(178, 636);
             this.entityTreeView.TabIndex = 0;
+            this.entityTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.entityTreeView_AfterSelect);
             // 
             // menuStrip1
             // 
@@ -243,16 +229,6 @@
             this.queryTextBox.Size = new System.Drawing.Size(325, 401);
             this.queryTextBox.TabIndex = 2;
             this.queryTextBox.Text = "";
-            // 
-            // logTabPage
-            // 
-            this.logTabPage.Location = new System.Drawing.Point(4, 22);
-            this.logTabPage.Name = "logTabPage";
-            this.logTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.logTabPage.Size = new System.Drawing.Size(768, 168);
-            this.logTabPage.TabIndex = 2;
-            this.logTabPage.Text = "로그";
-            this.logTabPage.UseVisualStyleBackColor = true;
             // 
             // Main
             // 

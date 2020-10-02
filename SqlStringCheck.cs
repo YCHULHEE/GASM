@@ -12,13 +12,14 @@ namespace GASM
     {
         MainDataSource ddl = new MainDataSource();
 
-        List<string> c4 = new List<string> { "drop"};
-        List<string> c5 = new List<string> { "alter", "grant" };
-        List<string> c6 = new List<string> { "create", "insert", "delete", "revoke", "commit" };
+        //List<string> c3 = new List<string> { "USE" };
+        List<string> c4 = new List<string> { "drop", "exec"};
+        List<string> c5 = new List<string> { "alter"};
+        List<string> c6 = new List<string> { "create", "insert", "delete", "select", "update" };
         List<string> c8 = new List<string> { "truncate", "rollback" };
 
 
-        public void Stringcheck(RichTextBox textBox, DataGridView dataGridView, TabPage tabPage)
+        public void Stringcheck(RichTextBox textBox, DataGridView dataGridView, TabPage tabPage) // 
         {
             try
             {
@@ -37,13 +38,16 @@ namespace GASM
             {
                 dataGridView.DataSource = ddl.DoSqlSelect(textBox);
             }
-            else if(textBox.Text.Substring(0, 4).ToLower().Equals("exec"))
-            {
-                dataGridView.DataSource = ddl.DoSqlSelect(textBox);
-            }
             else if (c4.Contains(textBox.Text.Substring(0, 4).ToLower()))
             {
-                ddl.DoSql(textBox);
+                if((textBox.Text.Substring(0, 4).ToLower()).Equals("exec"))
+                {
+                    dataGridView.DataSource = ddl.DoSqlSelect(textBox);
+                }
+                else
+                {
+                    ddl.DoSql(textBox);
+                }
             }
             else if (c5.Contains(textBox.Text.Substring(0, 5).ToLower()))
             {
@@ -63,11 +67,11 @@ namespace GASM
             }
         }
 
-        public string SqlCensor(RichTextBox textBox)
-        {
+        public string SqlCensor(RichTextBox textBox) // Sql문 검사하여 문자열 정리 후 자동 완성하는 기능(미구현)
+         {
             string[] censor;
             string result = "";
-            char[] sep = {';'};
+            char[] sep = { ';' };
             censor = textBox.Text.Split(sep, StringSplitOptions.RemoveEmptyEntries);
             foreach (var item in censor)
             {

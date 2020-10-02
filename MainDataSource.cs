@@ -12,7 +12,7 @@ namespace GASM
     class MainDataSource
     {
 
-        public void DoSql(RichTextBox textBox)
+        public void DoSql(RichTextBox textBox) // select 이외 구문 들어올 때 
         {
             try
             {
@@ -27,7 +27,7 @@ namespace GASM
             }
         }
 
-        public DataTable DoSqlSelect(RichTextBox textBox)
+        public DataTable DoSqlSelect(RichTextBox textBox) // select 구문 들어올 때
         {
             try
             {
